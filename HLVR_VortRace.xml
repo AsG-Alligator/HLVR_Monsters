@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+    <defName>Monster_Vortigaunt</defName>
+    <label>Vortigaunt</label>
+    <description>The Vortigaunts (taxonomic designation: Xenotherium subservilia,[2] or "Subservient Alien Beast"), formerly known as "Alien Slaves" or "Xen Slaves", and affectionately known as "Vorts" by their allies.\n\n 
+	
+	In appearance, Vortigaunts are somewhat humanoid, with two legs and two arms and an additional third arm protruding from the chest. This extra limb is a feature also found in other bipedal, sapient species from Xen, including the Alien Grunt and the Nihilanth. 
+	\n This similarity, along with other shared features such as red eyes and digitigrade legs, is strongly suggestive of a common ancestry with other intelligent Xen life forms. Vortigaunts have mottled green-brown skin, sharp teeth, and clawed hands. Vortigaunts have a slightly hunched posture, and their faces are dominated by a large eye with a maroon Sclera and a Heterochromic red-yellow iris with a yellow pupil, surrounded by three smaller eyes.
+	\n\n
+	
+	Due to their unique physique they cannot wear clothing.</description>
+	
+	<alienRace>
+        <generalSettings>
+			<immuneToAge>true</immuneToAge>
+			<disallowedTraits>
+                <li>
+                    <defName>Beauty</defName>
+                    <degree>2</degree>
+                    <chance>50</chance>
+                </li>
+                <li>
+                    <defName>Gay</defName>
+                    <chance>50</chance>
+                </li>
+                <li>
+                    <defName>Psychopath</defName>
+                </li>
+            </disallowedTraits>
+			<allowHumanBios>true</allowHumanBios>
+			<notXenophobistTowards>
+              <li>Human</li>
+           </notXenophobistTowards>
+		   <alienPartGenerator>
+				<aliencrowntypes>
+                    <li>InvisibleHead</li>
+                </aliencrowntypes>
+				<useGenderedHeads>false</useGenderedHeads>
+				<useGenderedBodies>false</useGenderedBodies>
+           </alienPartGenerator>
+		   <forcedRaceTraitEntries>
+                <li>
+                    <defName>Vortessence</defName>
+                </li>
+            </forcedRaceTraitEntries>
+        </generalSettings>
+        <graphicPaths>
+			<li>
+                <body>Pawn/Animal/Vort/Vort</body>
+                <head>Pawn/Animal/Vort/InvisibleHead</head>
+                <skeleton>Pawn/Animal/Vort/Vort</skeleton>
+                <skull>Pawn/Animal/Vort/InvisibleHead</skull>
+            </li>
+        </graphicPaths>
+        <hairSettings>
+			<hasHair>false</hasHair>
+        </hairSettings>
+        <raceRestriction>
+			<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+            <onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
+        </raceRestriction>
+        <compatibility>
+
+        </compatibility>
+    </alienRace>
+</AlienRace.ThingDef_AlienRace>
+
+
+  <TraitDef>
+    <defName>Vortessence</defName>
+    <degreeDatas>
+      <li>
+        <label>Vortessence</label>
+        <description>{PAWN_nameDef} is psychically connected to the Vortessence. This gives them a constant mood boost.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>PsychicSensitivity</li>
+    </conflictingTraits>
+  </TraitDef>
+  
+  <ThoughtDef>
+    <defName>MoodOffsetVortessence</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li>Vortessence</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>Vortessence connection</label>
+        <description>I'm never alone.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
+ 
