@@ -1,6 +1,7 @@
 ﻿using System;
 using Verse;
 using RimWorld;
+using Verse.AI;
 
 namespace HLVRMonsters
 {
@@ -12,10 +13,10 @@ namespace HLVRMonsters
 		// Token: 0x0600031C RID: 796 RVA: 0x00017D6C File Offset: 0x00015F6C
 		public override void CompTick()
 		{
-			base.CompTickRare();
+			base.CompTick();
 			if (this.addManhunterOnce)
 			{
-				(this.parent as Pawn).mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+				(this.parent as Pawn).mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter);
 				this.addManhunterOnce = false;
 			}
 		}
@@ -24,11 +25,5 @@ namespace HLVRMonsters
 		private bool addManhunterOnce = true;
 	}
 
-	public class CompProperties_CompInitialManhunter : CompProperties
-	{
-		public CompProperties_CompInitialManhunter()
-		{
-			this.compClass = typeof(CompInitialManhunter);
-		}
-	}
+
 }

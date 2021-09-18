@@ -60,7 +60,7 @@ namespace HLVRMonsters
 			{
 				Vector3 loc = new Vector3(vector.x, 0f, vector.z);
 				loc.y = AltitudeLayer.MoteOverhead.AltitudeFor();
-				MoteMaker.ThrowDustPuffThick(loc, base.Map, Rand.Range(1.5f, 3f), new Color(1f, 1f, 1f, 2.5f));
+				FleckMaker.ThrowDustPuffThick(loc, base.Map, Rand.Range(1.5f, 3f), new Color(1f, 1f, 1f, 2.5f));
 			}
 			if (secondarySpawnTick > Find.TickManager.TicksGame)
 			{

@@ -33,7 +33,7 @@
     <plantDamageFactor>2</plantDamageFactor>
     <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
     <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
-    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
     <explosionColorCenter>(166, 209, 123)</explosionColorCenter>
     <explosionColorEdge>(162, 242, 111)</explosionColorEdge>
     <soundExplosion>Monster_Snark_Explode</soundExplosion>
@@ -59,7 +59,7 @@
     <plantDamageFactor>2</plantDamageFactor>
     <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
     <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
-    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
     <explosionColorCenter>(166, 209, 123)</explosionColorCenter>
     <explosionColorEdge>(162, 242, 111)</explosionColorEdge>
     <soundExplosion>Monster_Antlion_WorkerDeath</soundExplosion>
@@ -457,7 +457,7 @@
     <plantDamageFactor>2</plantDamageFactor>
     <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
     <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
-    <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
     <explosionColorCenter>(230, 235, 234)</explosionColorCenter>
     <explosionColorEdge>(194, 242, 233)</explosionColorEdge>
     <soundExplosion>Monster_Houndeye_Blast</soundExplosion>
@@ -785,7 +785,7 @@
       <baseBodySize>1.2</baseBodySize>
       <baseHealthScale>2.5</baseHealthScale>
       <gestationPeriodDays>12</gestationPeriodDays>
-      <meatLabel>insect meat</meatLabel>
+      <useMeatFrom>Megaspider</useMeatFrom>
       <wildness>0.95</wildness>
       <lifeExpectancy>6</lifeExpectancy>
       <lifeStageAges>
